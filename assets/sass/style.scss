@@ -1,0 +1,36 @@
+@import "reset";
+@import "variables";
+@import "sectionMain";
+@import "collapseMenu";
+@import "modifiers";
+
+body {
+    font-family: "Oswald", serif;
+    transition: 2s;
+  }
+.dark {
+    background-color: #1D3E53;
+    color: white;
+    h1, h2, h3, p, span, i {
+        color: white;
+    }
+
+    #collapseMenu {
+        background-color: #1D3E53;
+    }
+
+    .hero__image {
+        background-color: #77ABB7;
+        border: 2px #254B62 solid;
+        
+    }
+}
+
+// .light {
+//     background-color: #FBF8F1;
+
+// }
+
+#times {
+    font-size: 5em;
+}

@@ -1,0 +1,133 @@
+body {
+	overflow: hidden;
+}
+
+#mainHero {
+	transition: 0.5s;
+}
+.main {
+	header {
+		height: 15vh;
+		margin: 0 64px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		position: relative;
+		.social {
+			i {
+				font-size: 1.5em;
+			}
+		}
+		.buttons {
+			display: flex;
+			justify-content: space-between;
+			width: 200px;
+			align-items: center;
+			#colorMode {
+				p {
+					font-size: 1.2em;
+					width: 50px;
+				}
+			}
+			#langMode {
+				p {
+					font-weight: 700;
+				}
+			}
+		}
+	}
+}
+
+.social {
+	.social__brands {
+		margin: 12px;
+		font-size: 16px;
+	}
+}
+
+.logo {
+	.logo__name {
+		font-size: 2em;
+		font-weight: 600;
+		span {
+			i {
+				color: red;
+				font-size: 2;
+				padding: 0.5em;
+			}
+		}
+	}
+}
+
+button {
+	font-size: 2em;
+	background-color: transparent;
+	border: none;
+	p {
+		&:hover {
+			color: red;
+		}
+	}
+}
+
+.hero {
+	height: 70vh;
+	margin: 0 64px 96px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	.hero__image {
+		border-radius: 50%;
+		min-width: 300px;
+		width: 300px;
+		max-height: 300px;
+		overflow: hidden;
+		border: 2px solid black;
+		transition: 1s;
+		&:hover {
+			scale: 1.4;
+			img {
+				scale: 1.3;
+			}
+		}
+		img {
+			transition: 0.5s;
+			width: 100%;
+			// height: 100%;
+		}
+	}
+	.hero__name {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		animation: fadein 2s;
+		h1 {
+			font-size: 5em;
+			padding: 32px;
+			span {
+				span {
+					font-weight: 900;
+					text-decoration: underline;
+					text-decoration-color: red;
+					text-underline-offset: 12px;
+					text-decoration-thickness: 2px;
+				}
+			}
+		}
+		p {
+			color: grey;
+		}
+	}
+}
+
+@keyframes fadein {
+	from {
+		opacity: 0;
+		scale: 2;
+	}
+	to {
+		opacity: 1;
+		scale: 1;
+	}
+}

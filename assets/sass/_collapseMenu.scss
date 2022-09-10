@@ -1,0 +1,85 @@
+#collapseMenu {
+	background-color: salmon;
+	height: 100vh;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 1;
+	width: 100%;
+	transition: 0.5s;
+	header {
+		height: 15vh;
+		margin: 0 64px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.menu {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 70vh;
+		margin: 0 64px 96px;
+		.menu__links {
+			li {
+				margin: 1em;
+				a {
+					color: white;
+					font-size: 3.5em;
+					margin: 1em;
+					.langMarker {
+						&:hover {
+							color: red;
+						}
+					}
+				}
+			}
+		}
+		.menu__info {
+			margin-left: 64px;
+			h4 {
+				color: red;
+				font-size: 1.5em;
+				padding: 0.5em 0;
+			}
+			p {
+				color: white;
+				padding: 0.5em 0;
+				a {
+					color: white;
+				}
+			}
+			.line {
+				margin-bottom: 16px;
+				height: 32px;
+				width: 50%;
+				border-bottom: 2px solid red;
+			}
+		}
+	}
+}
+
+.show {
+	transform: translate(0);
+	// visibility: visible;
+	// opacity: 1;
+}
+
+.hide {
+	transform: translate(100%);
+	// visibility: hidden;
+	// opacity: 0;
+}
+
+
+.showTwo {
+	transform: translate(0);
+	// visibility: visible;
+	// opacity: 1;
+}
+
+.hideTwo {
+	transform: translateY(-100%);
+	// visibility: hidden;
+	// opacity: 0;
+}
