@@ -95,6 +95,35 @@ const langValues = {
 	],
 };
 
+// Navigation language Start
+window.onload = function () {
+	if (localStorage.getItem("hasCodeRunBefore") === null) {
+		if (navigator.language === "en") {
+			console.log(navigator.language);
+			localStorage.setItem("langValues", langValues.eng);
+			for (let m in langMarker) {
+				langMarker[m].innerHTML = localStorage.getItem("langValues").split(",")[
+					m
+				];
+			}
+			localStorage.setItem("langModeInner", langModeInner.az);
+			langModeP.innerHTML = localStorage.getItem("langModeInner");
+		} else if (navigator.language === "az") {
+			localStorage.setItem("langValues", langValues.az);
+			for (let m in langMarker) {
+				langMarker[m].innerHTML = localStorage.getItem("langValues").split(",")[
+					m
+				];
+			}
+			localStorage.setItem("langModeInner", langModeInner.eng);
+			langModeP.innerHTML = localStorage.getItem("langModeInner");
+		}
+	}
+	localStorage.setItem("hasCodeRunBefore", true);
+};
+
+// Navigation Language End
+
 langModeBtn.onclick = () => {
 	if (langModeP.innerHTML === "AZ") {
 		localStorage.setItem("langValues", langValues.az);
@@ -127,11 +156,10 @@ if (localStorage.getItem("langValues")) {
 // when setting innerHTML to a null value, innerHTML remains unchanged.
 // in contrary, setting class to a null value destroys all styles.
 
-for (let n in langMarker) {
-	console.log(langMarker[n].innerHTML);
-}
+// for (let n in langMarker) {
+// 	console.log(langMarker[n].innerHTML);
+// }
 
 // questions regarding commas in innerHTML and settings classes and innerHTML to a null value
-
 
 // lang mode end
