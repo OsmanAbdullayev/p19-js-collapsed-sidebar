@@ -102,18 +102,14 @@ window.onload = function () {
 			console.log(navigator.language);
 			localStorage.setItem("langValues", langValues.eng);
 			for (let m in langMarker) {
-				langMarker[m].innerHTML = localStorage.getItem("langValues").split(",")[
-					m
-				];
+				langMarker[m].innerHTML = localStorage.getItem("langValues").split(",")[m];
 			}
 			localStorage.setItem("langModeInner", langModeInner.az);
 			langModeP.innerHTML = localStorage.getItem("langModeInner");
 		} else if (navigator.language === "az") {
 			localStorage.setItem("langValues", langValues.az);
 			for (let m in langMarker) {
-				langMarker[m].innerHTML = localStorage.getItem("langValues").split(",")[
-					m
-				];
+				langMarker[m].innerHTML = localStorage.getItem("langValues").split(",")[m];
 			}
 			localStorage.setItem("langModeInner", langModeInner.eng);
 			langModeP.innerHTML = localStorage.getItem("langModeInner");
@@ -128,18 +124,14 @@ langModeBtn.onclick = () => {
 	if (langModeP.innerHTML === "AZ") {
 		localStorage.setItem("langValues", langValues.az);
 		for (let m in langMarker) {
-			langMarker[m].innerHTML = localStorage.getItem("langValues").split(",")[
-				m
-			];
+			langMarker[m].innerHTML = localStorage.getItem("langValues").split(",")[m];
 		}
 		localStorage.setItem("langModeInner", langModeInner.eng);
 		langModeP.innerHTML = localStorage.getItem("langModeInner");
 	} else {
 		localStorage.setItem("langValues", langValues.eng);
 		for (let m in langMarker) {
-			langMarker[m].innerHTML = localStorage.getItem("langValues").split(",")[
-				m
-			];
+			langMarker[m].innerHTML = localStorage.getItem("langValues").split(",")[m];
 		}
 		localStorage.setItem("langModeInner", langModeInner.az);
 		langModeP.innerHTML = localStorage.getItem("langModeInner");
